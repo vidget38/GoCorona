@@ -11,21 +11,18 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="header__container">
+        <header id="open" class="header">
+            <div id="close" class="header__container">
                 <a href="" class="header__logo">
                     <img src="img/logo.svg" alt="Логотип">
                 </a>
                 <div class="header__menu menu">
-                    <nav id="menu" class="menu__body">
+                    <nav class="menu__body">
                         <ul class="menu__list">
-                            <li class="menu__item">
-                                <a href="" class="menu__link">Home</a>
-                                <a href="" class="menu__link">Features</a>
-                                <a href="" class="menu__link">Support</a>
-                                <a href="" class="menu__link">Contact us</a>
-                            </li>
-                            <!-- /.menu__item -->
+                            <li class="menu__item"><a href="" class="menu__link">Home</a></li>
+                            <li class="menu__item"><a href="" class="menu__link">Features</a></li>
+                            <li class="menu__item"><a href="" class="menu__link">Support</a></li>
+                            <li class="menu__item"><a href="" class="menu__link">Contact us</a></li>
                         </ul>
                         <!-- /.menu__list -->
                     </nav>
@@ -34,7 +31,8 @@
                 <!-- /.header__menu -->
                 <div class="header__button">
                     <a href="" class="button button_blue">Download</a>
-                    <a href="#menu" class="icon-menu"><span></span></a>
+                    <a href="#open" class="icon-menu"><span></span></a>
+                    <a href="#close" class="close-icon-menu"></a>
                 </div>
                 <!-- /.header__button -->
             </div>

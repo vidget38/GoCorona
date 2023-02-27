@@ -90,6 +90,8 @@ main {
 }
 
 .header__button {
+    position: relative;
+    z-index: 5;
     flex: 0 0 252px;
     display: flex;
     justify-content: flex-end;
@@ -121,6 +123,10 @@ main {
     color: #000;
     letter-spacing: 1px;
     margin: 0px 40px 0px 0px;
+}
+
+.menu__link:hover {
+    text-decoration: underline;
 }
 
 /* BUTTON
@@ -156,7 +162,7 @@ main {
 
 /* BURGER BUTTON
 ===============================*/
-
+.close-icon-menu,
 .icon-menu {
     display: none;
 }
@@ -213,30 +219,33 @@ main {
     .menu__body {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         width: 100%;
         height: 100%;
-        background-color: #587eec;
+        background-color: #fff;
         padding: 90px 15px 30px 15px;
+        transition: left .2s ease 0s;
+    }
+    .header:target .menu__body{
+        left: 0;
     }
     .menu__list {
-        
-    }
-    .menu__item {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .menu__item {
         margin: 0 0 25px 0;
     }
     .menu__item:last-child {
         margin-bottom: 0;
     }
     .menu__link {
-        background-color: #fff;
+        color: #000;
         font-size: 20px;
     }
     /* Burger */
+    .close-icon-menu,
     .icon-menu {
         display: flex;
         position: relative;
@@ -246,14 +255,28 @@ main {
         justify-content: space-between;
         margin: 0px 0px 0px 20px;
     }
-
+    .close-icon-menu {
+        display: none;
+    }
     .icon-menu::before,
-    .icon-menu:after {
+    .icon-menu::after {
         content: "";
         background-color:#000;
         height: 2px;
     }
-
+    .close-icon-menu::before,
+    .close-icon-menu::after {
+        content: "";
+        background-color:#000;
+        height: 2px;
+        transform-origin: 0 0;
+    }
+    .close-icon-menu::before {
+        transform: rotate(35deg);
+    }
+    .close-icon-menu::after {
+        transform: rotate(-32deg);
+    }
     .icon-menu span {
         height: 2px;
         background-color: #000;
